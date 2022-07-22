@@ -69,7 +69,7 @@ class AlloCineController extends AbstractController
             'movie' => $movieEntity,
             'reviews' => $reviewEntities,
             'note' => $roundNote,
-            'user' => $user
+            'user' => $user,
         ]);
     }
 
