@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Allocinoche !
+{% endblock %}
+{% block body %}
+
+	<div class="container px-2 py-2 mt-3 mb-3">
+		<h1>Formulaire d'ajout d'un
+			{{controller_name}}.</h1>
+		{{form_start(form)}}
+		<div class="py-2">{{form_row(form.note)}}</div>
+		<div class="py-2">{{form_row(form.comment)}}</div>
+		<button class='btn btn-warning' type="submit">Ajouter le commentaire</button>
+		{{form_end(form)}}
+	</div>
+
+{% endblock %}

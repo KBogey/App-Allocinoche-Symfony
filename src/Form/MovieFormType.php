@@ -6,7 +6,6 @@ use App\Entity\Actor;
 use App\Entity\Director;
 use App\Entity\Movie;
 use App\Entity\Category;
-use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;

@@ -49,6 +49,7 @@ class AlloCineController extends AbstractController
     {
         $note = 0;
         $diviseur = 0;
+        $user = $this->getUser();
 
         $movieEntity = $this->movieRepository->find($movieId);
         // $reviewEntities = $this->reviewRepository->findBy(['movie' => $movieEntity]);
@@ -64,12 +65,11 @@ class AlloCineController extends AbstractController
             $roundNote = $note / $diviseur;
         }
 
-
-
         return $this->render('allo_cine/indexMovieDetail.html.twig', [
             'movie' => $movieEntity,
             'reviews' => $reviewEntities,
             'note' => $roundNote,
+            'user' => $user
         ]);
     }
 
