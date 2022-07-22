@@ -1,0 +1,30 @@
+App\Entity\Category:
+  category0:
+    label: 'Porno'
+  category1:
+    label: 'Science-fiction'
+  category2: 
+    label: 'Action'
+  category3: 
+    label: 'Comédie dramatique'
+  category4:
+    label: 'Animation'
+  category5:
+    label: 'Fantastique'
+  category6:
+    label: 'Famille'
+  category7:
+    label: 'Drame'
+  category8:
+    label: 'Comédie'
+  category9:
+    label: 'Romance'
+  category10:
+    label: 'Arts et essais'
+  category11:
+    label: 'Thriller'
+  category12:
+    label: 'Epouvante-Horreur'
+  category13:
+    label: 'Policier'
+  

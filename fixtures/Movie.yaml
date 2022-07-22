@@ -1,0 +1,10 @@
+App\Entity\Movie:
+  movie{0..100}:
+    title: '<word()>'
+    releasedAt: '<dateTimeBetween("-5000 days", "now")>' 
+    duration: '<numberBetween(30, 240)>'
+    description: "<text(255)>"
+    imageUrl: "https://picsum.photos/200/300"
+    director: '@director*'
+    actors: "<numberBetween(7, 15)>x @actor*"
+    categories: "<numberBetween(1, 3)>x @category*"

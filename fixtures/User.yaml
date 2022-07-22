@@ -1,0 +1,5 @@
+App\Entity\User:
+  user{1..200}:
+    email: '<email()>'
+    roles: '[]'
+    password: '<name()>'

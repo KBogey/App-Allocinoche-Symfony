@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Allocinoche !
+{% endblock %}
+{% block body %}
+
+	<div class="container px-2 py-2 mt-3 mb-3">
+		<h1>Formulaire d'ajout d'un
+			{{controller_name}}.</h1>
+		{{form_start(form)}}
+		<div class="py-2">{{form_row(form.title)}}</div>
+		<div class="py-2">{{form_row(form.director)}}</div>
+		<div class="py-2">{{form_row(form.releasedAt)}}</div>
+		<div class="py-2">{{form_row(form.duration)}}</div>
+		<div class="py-2">{{form_row(form.actors)}}</div>
+		<div class="py-2">{{form_row(form.categories)}}</div>
+		<div class="py-2">{{form_row(form.description)}}</div>
+		<div class="py-2">{{form_row(form.imageUrl)}}</div>
+		<button class='btn btn-warning' type="submit">Ajouter le film</button>
+		{{form_end(form)}}
+	</div>
+
+{% endblock %}

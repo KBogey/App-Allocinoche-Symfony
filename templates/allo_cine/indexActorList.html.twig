@@ -1,0 +1,106 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AlloCiné!
+{% endblock %}
+
+{% block body %}
+	<style>
+		.example-wrapper {
+			margin: 1em auto;
+			max-width: 800px;
+			width: 95%;
+			font: 18px / 1.5 sans-serif;
+		}
+		.example-wrapper code {
+			background: #F5F5F5;
+			padding: 2px 6px;
+		}
+	</style>
+
+	<nav class="navbar navbar-expand-lg bg-warning">
+		<div class="container-fluid">
+			<img class="mx-2 rounded" style="width: 50px; height: 50px;" src="{{ asset('build/image/allocinoche.jpg') }}">
+			<a class="navbar-brand" href="{{path('app_allo_cine')}}">Allocinoche</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link" aria-current="page" href="{{path('app_allo_cine_movielist')}}">Films</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" href="{{path('app_allo_cine_actorlist')}}">Acteurs</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{{path('app_allo_cine_directorlist')}}">
+							Réalisateurs
+						</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Par genre
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a class="dropdown-item" href="{{path('app_allo_cine_moviecategory', {'categoryId': 3}) }}">Action</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="{{path('app_allo_cine_moviecategory', {'categoryId': 5}) }}">Animation</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="{{path('app_allo_cine_moviecategory', {'categoryId': 11}) }}">Arts & essais</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="{{path('app_allo_cine_moviecategory', {'categoryId': 9}) }}">Comédie</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="{{path('app_allo_cine_moviecategory', {'categoryId': 4}) }}">Comédie dramatique</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="{{path('app_allo_cine_moviecategory', {'categoryId': 8}) }}">Drame</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="{{path('app_allo_cine_moviecategory', {'categoryId': 13}) }}">Epouvante-Horreur</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="{{path('app_allo_cine_moviecategory', {'categoryId': 7}) }}">Famille</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="{{path('app_allo_cine_moviecategory', {'categoryId': 6}) }}">Fantastique</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="{{path('app_allo_cine_moviecategory', {'categoryId': 14}) }}">Policier</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="{{path('app_allo_cine_moviecategory', {'categoryId': 1}) }}">Porno</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="{{path('app_allo_cine_moviecategory', {'categoryId': 10}) }}">Romance</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="{{path('app_allo_cine_moviecategory', {'categoryId': 2}) }}">Science-fiction</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="{{path('app_allo_cine_moviecategory', {'categoryId': 12}) }}">Thriller</a>
+							</li>
+
+						</ul>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="example-wrapper border border_warning rounded me-auto ms-auto px-3 py-2">
+		<ul>
+			{% for actor in actors %}
+				<li>
+					<a href="{{path('app_allo_cine_actordetail', {'actorId': actor.id})}}">{{actor.lastName}}
+						{{actor.firstName}}</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+{% endblock %}
